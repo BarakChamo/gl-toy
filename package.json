@@ -11,26 +11,21 @@
       "babelify"
     ]
   },
-  "repository": "stackgl/gl-toy",
+  "repository": "barakchamo/gl-toy",
   "keywords": [
-    "glslify",
     "webgl",
     "shader",
-    "shaders",
-    "boilerplate",
-    "kickstart",
-    "shadertoy",
-    "ecosystem:stackgl"
+    "shaders"
   ],
   "license": "MIT",
   "dependencies": {
     "a-big-triangle": "^1.0.0",
-    "babelify": "^6.0.2",
     "canvas-fit": "^1.2.0",
     "gl-context": "^0.1.1",
     "gl-shader": "^4.0.1"
   },
   "devDependencies": {
+    "babelify": "^6.0.2",
     "budo": "^4.0.0",
     "garnish": "^2.1.3",
     "glslify": "^2.1.2",
