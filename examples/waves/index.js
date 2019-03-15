@@ -1,5 +1,5 @@
 var glslify = require('glslify')
-var toy     = require('../')
+import toy from '../../lib/toy'
 
 var start  = Date.now()
 var shader = glslify('./waves.frag', {
