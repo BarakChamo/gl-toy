@@ -4,7 +4,7 @@
   "description": "Create quick WebGL demo's using glslify",
   "main": "index.js",
   "scripts": {
-    "start": "budo examples/frame/index.js -t babelify | garnish"
+    "start": "budo examples/noisereveal/index.js -t babelify | garnish"
   },
   "browserify": {
     "transform": [
@@ -32,7 +32,8 @@
     "canvas-fit": "^1.2.0",
     "gl-context": "^0.1.1",
     "gl-shader": "^4.0.1",
-    "gl-texture2d": "^2.1.0"
+    "gl-texture2d": "^2.1.0",
+    "glsl-noise": "0.0.0"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
