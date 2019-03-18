@@ -7,11 +7,13 @@ console.log('PRESETS', presets)
 */
 
 /* Example 1 */ 
-// Create first example frames
+// Select image by id in document
 const image1 = document.getElementById('example1')
+
+// Convert image to a shaderFrame
 const frame1 = new Frame(image1, presets.noiseReveal)
 
-// Handle enter and exit clicks
+// Handle enter, exit and effect changes
 document.getElementById('enter1').onclick = () => frame1.enter()
 document.getElementById('exit1').onclick = () => frame1.exit()
 document.getElementById('select1').onchange = e => {frame1.setEffect(presets[e.target.value])}
