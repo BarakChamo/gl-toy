@@ -4,19 +4,22 @@
   "description": "Create quick WebGL demo's using glslify",
   "main": "index.js",
   "scripts": {
-    "start": "budo examples/noisereveal/index.js -t babelify | garnish"
+    "start": "budo ./index.js | garnish"
   },
   "browserify": {
     "transform": [
-      "babelify",
-      {
-        "presets": [
-          "@babel/preset-env"
-        ],
-        "plugins": [
-          "glslify"
-        ]
-      }
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ],
+          "plugins": [
+            "@babel/plugin-proposal-class-properties"
+          ]
+        }
+      ],
+      "glslify"
     ]
   },
   "repository": "barakchamo/gl-toy",
@@ -27,8 +30,11 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.3.4",
     "a-big-triangle": "^1.0.0",
     "babel-plugin-glslify": "^2.0.0",
+    "babelify": "^10.0.0",
+    "bulma": "^0.7.4",
     "canvas-fit": "^1.2.0",
     "gl-context": "^0.1.1",
     "gl-shader": "^4.0.1",
@@ -38,9 +44,8 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "babelify": "^6.0.2",
-    "budo": "^4.0.0",
-    "garnish": "^2.1.3",
+    "budo": "^4.2.2",
+    "garnish": "^2.3.0",
     "glslify": "^2.3.1",
     "glslify-hex": "^2.0.1"
   },

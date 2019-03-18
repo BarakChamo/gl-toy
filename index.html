@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fragment.js - Examples</title>
+		<link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+		<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+					<i style="font-size: 0.6em; margin-top: -6px;" class="em-svg em-fireworks"></i>
+				Fragment.js
+      </h1>
+      <p class="subtitle">
+				A <strong>shader-based</strong> image FX library.
+			</p>
+
+			<!-- Example containers -->
+			<div class="columns">
+					<div class="column is-10 is-offset-1">
+							<div class="column is-6 is-offset-3">
+								<p class="subtitle">
+									<strong>Fragment.js</strong> is a small JavaScript library for creating image transitions and animations using WebGL fragment shaders.
+								</p>
+							</div>
+
+						<div class="tile is-ancestor">
+							<div class="tile is-parent">
+								<article class="tile is-child">
+									<div class="content">
+										<p class="title">Transitions</p>
+										<p class="subtitle">animate images in n' out</p>
+										<div class="tile is-parent">
+											<div class="tile is-child is-6">
+												<figure class="image backdrop is-480x480">
+													<img id="example1" style="visibility: hidden;" src="assets/cat.jpg" alt="">
+												</figure>
+												<div class="field is-centered column is-8 is-offset-2">
+														<div class="buttons is-inline">
+																<a id="enter1" class="button is-dark">Enter</a>
+																<a id="exit1"  class="button is-light">Exit</a>
+														</div>
+														<div class="select is-primary">
+																<select id="select1">
+																	<option value="noiseReveal">Noise Disolve</option>
+																	<option value="pixelReveal">Pixelation</option>
+																	<option value="pixelation">Pixel Disolve</option>
+																</select>
+															</div>
+													</div>
+											</div>
+											<div class="tile is-child is-6">
+							<pre>
+<code class="language-html" data-lang="html">
+&lt;figure class=&quot;image is-128x128&quot;&gt;
+	&lt;img class=&quot;is-rounded&quot; src=&quot;https://bulma.io/images/placeholders/128x128.png&quot;&gt;
+&lt;/figure&gt;
+</code>
+							</pre>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+			</div>
+    </div>
+  </section>
+
+	<footer class="footer">
+		<div class="content has-text-centered">
+			<p>
+				<strong>Fragment.js</strong> is built by <a href="https://github.com/barakchamo">Barak Chamo</a> at <a href="http://cactus.is">Cactus</a>. The source code is licensed
+				<a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+			</p>
+		</div>
+	</footer>
+
+  <!-- Scripts -->
+	<script src="/index.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>

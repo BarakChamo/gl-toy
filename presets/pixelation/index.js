@@ -9,6 +9,7 @@ var shader = glslify('./frame.frag', {
 
 const image = new Image(200,200)
 image.src = '/examples/frame/cat.jpg'
+
 const frame = new Frame(image, shader, (gl, sh) => {
   // sh.uniforms.uScreenSize = [gl.drawingBufferWidth, gl.drawingBufferHeight]
   // sh.uniforms.uTime = (Date.now() - start) / 1000

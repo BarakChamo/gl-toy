@@ -1,0 +1,17 @@
+.backdrop {
+    background-color: #ff6699;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.image img,
+figure img {
+    vertical-align: top !important;
+}
+
+.highlight .highlight-pre {
+    /* flex-grow:  */
+}

@@ -12,6 +12,6 @@ image.src = '/examples/pixelation/cat.jpg'
 const frame = new Frame(image, shader, (gl, sh) => {
   // sh.uniforms.uScreenSize = [gl.drawingBufferWidth, gl.drawingBufferHeight]
   // sh.uniforms.uTime = (Date.now() - start) / 1000
-})
+})   
 
 window.frame = frame
