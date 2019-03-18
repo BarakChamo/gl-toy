@@ -57,16 +57,18 @@
 											<div class="tile is-child is-6">
 							<pre>
 <code class="language-javascript" data-lang="javascript">
+import Frame, { FX } from 'shaderFrame'
+
 // Select image by id in document
 const image = document.getElementById('example1')
 
 // Convert image to a shaderFrame
-const frame = new Frame(image, presets.noiseReveal)
+const frame = new Frame(image, FX.noiseReveal)
 
 // Handle enter, exit and effect changes
 enterButton.onclick = () => frame1.enter()
 exitButton.onclick = () => frame1.exit()
-selectFX.onchange = e => {frame1.setEffect(fx[e.target.value])}
+selectFX.onchange = e => {frame1.setEffect(FX[e.target.value])}
 </code>
 							</pre>
 											</div>

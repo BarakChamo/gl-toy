@@ -1,6 +1,4 @@
-import presets from './presets'
-import Frame from './lib/frame'
-console.log('PRESETS', presets)
+import Frame, { FX } from './lib/frame'
 
 /*
 **  Fragment.js shader frame examples
@@ -11,11 +9,11 @@ console.log('PRESETS', presets)
 const image1 = document.getElementById('example1')
 
 // Convert image to a shaderFrame
-const frame1 = new Frame(image1, presets.noiseReveal)
+const frame1 = new Frame(image1, FX.noiseReveal)
 
 // Handle enter, exit and effect changes
 document.getElementById('enter1').onclick = () => frame1.enter()
 document.getElementById('exit1').onclick = () => frame1.exit()
-document.getElementById('select1').onchange = e => {frame1.setEffect(presets[e.target.value])}
+document.getElementById('select1').onchange = e => {frame1.setEffect(FX[e.target.value])}
 
 setTimeout(() => frame1.enter(), 0)

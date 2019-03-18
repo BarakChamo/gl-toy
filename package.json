@@ -2,9 +2,10 @@
   "name": "gl-toy",
   "version": "2.0.3",
   "description": "Create quick WebGL demo's using glslify",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "budo ./index.js | garnish"
+    "start": "budo ./index.js | garnish",
+    "build": "browserify lib/frame.js -o build.js"
   },
   "browserify": {
     "transform": [
