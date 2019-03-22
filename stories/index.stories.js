@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 import { linkTo } from '@storybook/addon-links'
 
-// import { Button, Welcome } from '@storybook/react/demo';
-import { Frame, Button, Welcome } from '../lib/component.js'
+import { Button, Welcome } from '@storybook/react/demo';
+import Frame from '../lib/component.js'
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />)
 
