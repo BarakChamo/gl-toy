@@ -1,4 +1,4 @@
-(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Frame = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.ShaderFrame = f()}})(function(){var define,module,exports;return (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36,15 +36,15 @@ var vert = "\nattribute vec2 position;\nvarying vec2 texCoord;\n\nvoid main() {\
 
 var noOp = function noOp() {};
 
-var Frame =
+var ShaderFrame =
 /*#__PURE__*/
 function () {
-  function Frame(tex, _frag) {
+  function ShaderFrame(tex, _frag) {
     var _this = this;
 
     var updateHook = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : noOp;
 
-    _classCallCheck(this, Frame);
+    _classCallCheck(this, ShaderFrame);
 
     _defineProperty(this, "tick", function () {
       if (_this.target && _this.position < 1.0 || !_this.target && _this.position > 0.0) window.requestAnimationFrame(_this.tick);
@@ -134,7 +134,7 @@ function () {
   **/
 
 
-  _createClass(Frame, [{
+  _createClass(ShaderFrame, [{
     key: "loadTexture",
     value: function loadTexture(tex) {
       this.texElm = tex; // check if image
@@ -168,10 +168,10 @@ function () {
     }
   }]);
 
-  return Frame;
+  return ShaderFrame;
 }();
 
-var _default = Frame;
+var _default = ShaderFrame;
 exports.default = _default;
 
 
