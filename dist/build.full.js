@@ -38,10 +38,10 @@ var noOp = function noOp() {};
 var ShaderFrame =
 /*#__PURE__*/
 function () {
-  function ShaderFrame(tex, _frag) {
+  function ShaderFrame(tex, _frag, canvas) {
     var _this = this;
 
-    var updateHook = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : noOp;
+    var updateHook = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : noOp;
 
     _classCallCheck(this, ShaderFrame);
 
@@ -108,7 +108,7 @@ function () {
     this.target = 0.0;
     this.duration = 1.0;
     this.startTime = Date.now();
-    var canvasElm = document.createElement('canvas');
+    var canvasElm = canvas || document.createElement('canvas');
     canvasElm.style = 'position: absolute; top: 0px; left: 0px;';
     this.canvas = (document.contains(tex) ? tex.parentElement : document.body).appendChild(canvasElm);
     this.gl = (0, _glContext.default)(this.canvas);

@@ -7,7 +7,7 @@
     "start": "budo ./index.js | garnish",
     "build": "browserify lib/frame.js -o dist/build.js --no-bundle-external --standalone ShaderFrame",
     "build-full": "browserify lib/frame.js -o dist/build.full.js --standalone ShaderFrame",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./assets -p 6006",
     "build-storybook": "build-storybook"
   },
   "browserify": {
