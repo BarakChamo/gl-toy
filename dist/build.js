@@ -174,6 +174,7 @@ function () {
 var _default = Frame;
 exports.default = _default;
 
+
 },{"../presets":2,"a-big-triangle":undefined,"gl-context":undefined,"gl-shader":undefined,"gl-texture2d":undefined}],2:[function(require,module,exports){
 "use strict";
 
@@ -194,6 +195,7 @@ var shaders = {
 };
 var _default = shaders;
 exports.default = _default;
+
 
 },{}]},{},[1])(1)
 });

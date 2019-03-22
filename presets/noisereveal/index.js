@@ -1,5 +1,4 @@
 var glslify = require('glslify')
-import toy from '../../lib/toy'
 import Frame from '../../lib/frame'
 
 var start  = Date.now()
