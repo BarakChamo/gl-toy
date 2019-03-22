@@ -23,15 +23,6 @@ const containerStyle = {width: '250px', height: '250px'}
 const style = {width: '100%', height: '100%'}
 
 storiesOf('Shader Frame', module)
-  .add('with <img> element', () => (
-    <div style={containerStyle}>
-      <Frame>
-        <img style={style} src='cat.jpg'></img>
-      </Frame>
-    </div>
-  ))
   .add('with image URL', () => (
-    <div style={containerStyle}>
-      <Frame style={style} class={'full'} source='cat.jpg'/>
-    </div>
+    <Frame style={containerStyle} imgstyle={style} class={'full'} source='cat.jpg'/>
   ))
