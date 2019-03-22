@@ -1,5 +1,6 @@
-import Frame, { FX } from './lib/frame'
-
+// import Frame, { FX } from './lib/frame'
+import Frame, { FX } from './dist/build.js'
+console.log(Frame, FX)
 /*
 **  Fragment.js shader frame examples
 */

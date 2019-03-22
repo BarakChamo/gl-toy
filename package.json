@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "budo ./index.js | garnish",
-    "build": "browserify lib/frame.js -o build.js"
+    "build": "browserify lib/frame.js -o dist/build.js --no-bundle-external --standalone Frame"
   },
   "browserify": {
     "transform": [
@@ -45,6 +45,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "browserify-shim": "^3.8.14",
     "budo": "^4.2.2",
     "garnish": "^2.3.0",
     "glslify": "^2.3.1",
