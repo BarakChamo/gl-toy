@@ -1,8 +1,6 @@
-var glslify = require('glslify')
-
-const pixelation = glslify('./pixelation.frag', { transform: ['glslify-hex'] })
-const pixelReveal = glslify('./pixel-reveal.frag', { transform: ['glslify-hex'] })
-const noiseReveal = glslify('./noise-reveal.frag', { transform: ['glslify-hex'] })
+import pixelation from './pixelation.frag'
+import pixelReveal from './pixel-reveal.frag'
+import noiseReveal from './noise-reveal.frag'
 
 const shaders = {
     pixelation,

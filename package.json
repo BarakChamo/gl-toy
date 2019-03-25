@@ -4,11 +4,10 @@
   "description": "Create quick WebGL demo's using glslify",
   "main": "dist/build.full.js",
   "scripts": {
-    "start": "budo ./index.js | garnish",
-    "build": "browserify lib/frame.js -o dist/build.js --no-bundle-external --standalone ShaderFrame",
-    "build-full": "browserify lib/frame.js -o dist/build.full.js --standalone ShaderFrame",
-    "build-component": "browserify lib/component.js -o dist/component.js --no-bundle-external --standalone ShaderFrameComponent",
-    "storybook": "start-storybook -s ./assets -p 6006",
+    "start": "webpack-dev-server --config=configs/webpack.config.js --open",
+    "build": "webpack --config=configs/webpack.config.js",
+    "watch": "webpack --watch --config=configs/webpack.config.js",
+    "storybook": "start-storybook -s ./dist/assets -p 6006",
     "build-storybook": "build-storybook"
   },
   "browserify": {
@@ -42,7 +41,11 @@
     "gl-context": "^0.1.1",
     "gl-shader": "^4.0.1",
     "gl-texture2d": "^2.1.0",
-    "glsl-noise": "0.0.0"
+    "glsl-noise": "0.0.0",
+    "glslify": "^7.0.0",
+    "glslify-loader": "^2.0.0",
+    "raw-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -55,19 +58,10 @@
     "@storybook/react": "^5.0.3",
     "babel-loader": "^8.0.5",
     "babel-plugin-glslify": "^2.0.0",
-    "babelify": "^10.0.0",
-    "browserify-shim": "^3.8.14",
-    "budo": "^4.2.2",
     "bulma": "^0.7.4",
-    "garnish": "^2.3.0",
-    "glslify": "^2.3.1",
-    "glslify-hex": "^2.0.1",
-    "uglifyify": "^5.0.1"
-  },
-  "files": [
-    "lib",
-    "LICENSE",
-    "index.js",
-    "HISTORY.md"
-  ]
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
 }
