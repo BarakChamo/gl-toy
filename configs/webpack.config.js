@@ -23,7 +23,7 @@ const libConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-class-properties']
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
         }
       }
     }, {
@@ -57,7 +57,7 @@ const exampleConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
+          plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
     }]
@@ -97,7 +97,7 @@ const componentConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
         }
       }
     }]

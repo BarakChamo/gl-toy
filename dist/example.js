@@ -91,10 +91,9 @@
   !*** ./lib/example.js ***!
   \************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("\n\n/*\n**  Fragment.js shader frame examples\n*/\n\n/* Example 1 */\n// Select image by id in document\nvar image1 = document.getElementById('example1'); // Convert image to a shaderFrame\n\nvar frame1 = new ShaderFrame(image1, ShaderFrame.FX.pixelation); // Handle enter, exit and effect changes\n\ndocument.getElementById('enter1').onclick = function () {\n  return frame1.enter();\n};\n\ndocument.getElementById('exit1').onclick = function () {\n  return frame1.exit();\n};\n\ndocument.getElementById('select1').onchange = function (e) {\n  frame1.setEffect(ShaderFrame.FX[e.target.value]);\n};\n\nsetTimeout(function () {\n  return frame1.enter();\n}, 0);\n\n//# sourceURL=webpack:///./lib/example.js?");
+eval("/*\n**  Fragment.js shader frame examples\n*/\n\n/* Example 1 */\n// Select image by id in document\nvar image1 = document.getElementById('example1'); // Convert image to a shaderFrame\n\nvar frame1 = new ShaderFrame(image1, ShaderFrame.FX.pixelation); // Handle enter, exit and effect changes\n\ndocument.getElementById('enter1').onclick = function () {\n  return frame1.enter();\n};\n\ndocument.getElementById('exit1').onclick = function () {\n  return frame1.exit();\n};\n\ndocument.getElementById('select1').onchange = function (e) {\n  frame1.setEffect(ShaderFrame.FX[e.target.value]);\n};\n\nsetTimeout(function () {\n  return frame1.enter();\n}, 0);\n\n//# sourceURL=webpack:///./lib/example.js?");
 
 /***/ })
 
