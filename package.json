@@ -10,24 +10,6 @@
     "storybook": "start-storybook -s ./dist/assets -p 6006",
     "build-storybook": "build-storybook"
   },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "@babel/preset-env",
-            "@babel/preset-react"
-          ],
-          "plugins": [
-            "@babel/plugin-proposal-class-properties"
-          ]
-        }
-      ],
-      "glslify",
-      "uglifyify"
-    ]
-  },
   "repository": "barakchamo/gl-toy",
   "keywords": [
     "webgl",
