@@ -66,7 +66,9 @@ const componentConfig = {
   entry: './lib/component.js',
   target: 'web',
   mode: 'development',
-  externals: ['react', 'prop-types'],
+  externals: {
+    'react': 'React'
+  },
   output: {
     filename: 'component.js',
     path: path.resolve(__dirname, '../dist'),
