@@ -36,6 +36,8 @@
   ],
   "license": "MIT",
   "dependencies": {
+  },
+  "devDependencies": {
     "a-big-triangle": "^1.0.0",
     "canvas-fit": "^1.2.0",
     "gl-context": "^0.1.1",
@@ -45,9 +47,7 @@
     "glslify": "^7.0.0",
     "glslify-loader": "^2.0.0",
     "raw-loader": "^2.0.0",
-    "uglifyjs-webpack-plugin": "^2.1.2"
-  },
-  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.1.2",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
