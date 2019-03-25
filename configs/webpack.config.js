@@ -5,6 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const libConfig = {
   entry: './lib/frame.js',
   target: 'web',
+  mode: 'development',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
@@ -31,9 +32,9 @@ const libConfig = {
       use: ['raw-loader', 'glslify-loader']
     }]
   },
-  optimization: {
-    minimizer: [new UglifyJsPlugin()],
-  },
+  // optimization: {
+  //   minimizer: [new UglifyJsPlugin()],
+  // },
   devServer: {
     contentBase: path.join(__dirname, '../dist'),
     historyApiFallback: true,
@@ -56,7 +57,7 @@ const exampleConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
         }
       }
     }]
@@ -103,4 +104,4 @@ const componentConfig = {
   }
 }
 
-module.exports = [libConfig, exampleConfig, componentConfig]
+module.exports = [libConfig, componentConfig, exampleConfig]
