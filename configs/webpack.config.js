@@ -56,7 +56,7 @@ const exampleConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties']
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
         }
       }
     }]
@@ -73,12 +73,13 @@ const componentConfig = {
       commonjs2: 'react', 
       amd: 'React',
       root: 'React'
+    },
+    'prop-types': {
+      'commonjs': 'prop-types',
+      'commonjs2': 'prop-types',
+      'amd': 'prop-types',
+      'root': 'PropTypes'
     }
-  },
-  resolve: {      
-    alias: {          
-      'react': path.resolve(__dirname, './node_modules/react')
-    }  
   },
   output: {
     library: 'ShaderFrameComponent',      
@@ -95,7 +96,7 @@ const componentConfig = {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
-          plugins: ['@babel/plugin-proposal-class-properties']
+          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime']
         }
       }
     }]
