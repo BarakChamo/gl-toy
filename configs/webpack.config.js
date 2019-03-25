@@ -21,7 +21,7 @@ const libConfig = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
+          presets: ['@babel/preset-env'],
           plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
@@ -51,7 +51,7 @@ const exampleConfig = {
   module: {
     rules: [{
       test: /\.m?js$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /(node_modules|bower_components|dist)/,
       use: {
         loader: 'babel-loader',
         options: {
