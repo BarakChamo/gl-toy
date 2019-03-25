@@ -28,10 +28,17 @@ storiesOf('Shader Frame', module)
   .add('Basic example - noise', () => (
     <FrameExample style={containerStyle} imgstyle={style} class={'full'} source='cat.jpg'/>
   ))
-  .add('Basic example - wipe', () => (
+  .add('Timing control', () => (
     <div>
-      <FrameExample style={containerStyle} fx='wipe' imgstyle={style} class={'full'} duration={1000} source='cat.jpg'/>
-      <FrameExample style={containerStyle} fx='wipe' imgstyle={style} class={'full'} duration={2000} source='cat.jpg'/>
-      <FrameExample style={containerStyle} fx='wipe' imgstyle={style} class={'full'} duration={3000} source='cat.jpg'/>
+      <FrameExample style={containerStyle} fx='wipe' duration={1000} imgstyle={style} class={'full'} source='cat.jpg'/>
+      <FrameExample style={containerStyle} fx='wipe' duration={2000} imgstyle={style} class={'full'} source='cat.jpg'/>
+      <FrameExample style={containerStyle} fx='wipe' duration={3000} imgstyle={style} class={'full'} source='cat.jpg'/>
+    </div>
+  ))
+  .add('Shader uniforms', () => (
+    <div>
+      <FrameExample style={containerStyle} fx='wipe' params={{tiling: 10}} imgstyle={style} class={'full'} source='cat.jpg'/>
+      <FrameExample style={containerStyle} fx='wipe' params={{tiling: 25}} imgstyle={style} class={'full'} source='cat.jpg'/>
+      <FrameExample style={containerStyle} fx='wipe' params={{tiling: 50}} imgstyle={style} class={'full'} source='cat.jpg'/>
     </div>
   ))

@@ -1,6 +1,6 @@
 {
   "name": "shader-frame",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Create quick WebGL demo's using glslify",
   "main": "dist/index.js",
   "scripts": {

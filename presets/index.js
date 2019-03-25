@@ -4,10 +4,10 @@ import noiseReveal from './noise-reveal.frag'
 import wipe from './wipe.frag'
 
 const shaders = {
-	pixelation,
-	pixelReveal,
-	noiseReveal,
-	wipe
+	pixelation: [pixelation, {}],
+	pixelReveal: [pixelReveal, {}],
+	noiseReveal: [noiseReveal, {}],
+	wipe: [wipe, { tiling: 10.0 }]
 }
 
 export default shaders
