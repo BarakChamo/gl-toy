@@ -8,6 +8,7 @@ const libConfig = {
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '../dist'),
+    publicPath: '/dist/',
     library: 'ShaderFrame',
     libraryTarget: 'umd',
     libraryExport: 'default'
@@ -67,10 +68,23 @@ const componentConfig = {
   target: 'web',
   mode: 'development',
   externals: {
-    'react': 'React'
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react', 
+      amd: 'React',
+      root: 'React'
+    }
+  },
+  resolve: {      
+    alias: {          
+      'react': path.resolve(__dirname, './node_modules/react')
+    }  
   },
   output: {
+    library: 'ShaderFrameComponent',      
+    libraryTarget: 'umd',
     filename: 'component.js',
+    publicPath: '/dist/',
     path: path.resolve(__dirname, '../dist'),
   },
   module: {
