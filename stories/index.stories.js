@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
 import { storiesOf } from '@storybook/react'
-import { Button } from '@storybook/react/demo';
-import Frame from '../lib/component.js'
+import { Button } from '@storybook/react/demo'
+import Frame from '../dist/component.js'
+
+console.log(Frame)
 
 class FrameExample extends Component {
   constructor(props) {
