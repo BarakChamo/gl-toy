@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const libConfig = {
   entry: './lib/frame.js',
   target: 'web',
-  mode: 'development',
+  // mode: 'development',
   output: {
     filename: 'index.js',
     library: 'ShaderFrame',
@@ -71,7 +71,7 @@ const exampleConfig = {
 const componentConfig = {
   entry: './lib/component.js',
   target: 'web',
-  mode: 'development',
+  // mode: 'development',
   // externals: {
   //   react: {
   //     commonjs: 'react',
