@@ -15,7 +15,7 @@ class FrameExample extends Component {
   render() {
     return (
       <div style={containerStyle}>
-        <Frame state={this.state.enter} {...this.props} />
+        {/* <Frame state={this.state.enter} {...this.props} /> */}
         <Button onClick={() => this.setState({enter: true})}>Enter</Button>
         <Button onClick={() => this.setState({enter: false})}>Exit</Button>
 

@@ -1,6 +1,6 @@
 {
   "name": "shader-frame",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Create quick WebGL demo's using glslify",
   "main": "dist/index.js",
   "scripts": {
@@ -17,20 +17,19 @@
     "shaders"
   ],
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@storybook/addon-actions": "^5.0.3",
-    "@storybook/addon-links": "^5.0.3",
-    "@storybook/addons": "^5.0.3",
-    "@storybook/react": "^5.0.3",
+    "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-links": "^5.0.6",
+    "@storybook/addons": "^5.0.6",
+    "@storybook/react": "^5.0.6",
     "a-big-triangle": "^1.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-glslify": "^2.0.0",

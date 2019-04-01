@@ -1,6 +1,5 @@
 const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const webpack = require('webpack')
 
 const libConfig = {
   entry: './lib/frame.js',
@@ -12,18 +11,20 @@ const libConfig = {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
     libraryTarget: 'umd',
-    libraryExport: 'default'
+    libraryExport: 'ShaderFrame'
   },
   // externals: ['a-big-triangle', 'gl-context', 'gl-shader', 'gl-texture2d', 'glslify'],
   module: {
     rules: [{
       test: /\.m?js$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
+          plugins: [
+            '@babel/plugin-proposal-class-properties'
+          ]
         }
       }
     }, {
@@ -52,11 +53,14 @@ const exampleConfig = {
   module: {
     rules: [{
       test: /\.m?js$/,
-      exclude: /(node_modules|bower_components|dist)/,
+      exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react'],
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ],
           plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
@@ -68,38 +72,40 @@ const componentConfig = {
   entry: './lib/component.js',
   target: 'web',
   mode: 'development',
-  externals: {
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react', 
-      amd: 'React',
-      root: 'React'
-    },
-    'prop-types': {
-      'commonjs': 'prop-types',
-      'commonjs2': 'prop-types',
-      'amd': 'PropTypes',
-      'root': 'PropTypes'
-    }
-  },
+  // externals: {
+  //   react: {
+  //     commonjs: 'react',
+  //     commonjs2: 'react', 
+  //     amd: 'React',
+  //     root: 'React'
+  //   },
+  //   'prop-types': {
+  //     'commonjs': 'prop-types',
+  //     'commonjs2': 'prop-types',
+  //     'amd': 'PropTypes',
+  //     'root': 'PropTypes'
+  //   }
+  // },
   output: {
-    library: 'ShaderFrameComponent',      
     filename: 'component.js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
-    libraryTarget: 'umd',
-    libraryExport: 'default'
+    // library: 'ShaderFrameComponent',      
+    // libraryTarget: 'umd',
+    // libraryExport: 'ShaderFrameComponent'
   },
   module: {
     noParse: /react/,
     rules: [{
       test: /\.m?js$/,
-      exclude: /(node_modules|bower_components)/,
+      exclude: /(node_modules|dist)/,
       use: {
         loader: 'babel-loader',
         options: {
           presets: ['@babel/preset-react', '@babel/preset-env'],
-          plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-runtime', '@babel/plugin-transform-modules-commonjs']
+          plugins: [
+            '@babel/plugin-proposal-class-properties'
+          ]
         }
       }
     }],
