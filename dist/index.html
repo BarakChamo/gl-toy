@@ -30,10 +30,10 @@
 							</div>
 
 						<div class="tile is-ancestor">
-							<div class="tile is-parent">
+							<div class="tile is-parent is-vertical">
 								<article class="tile is-child">
 									<div class="content">
-										<p class="title">Transitions</p>
+										<p class="title">In n' Out</p>
 										<p class="subtitle">animate images in n' out</p>
 										<div class="tile is-parent">
 											<div class="tile is-child is-6">
@@ -50,6 +50,7 @@
 																	<option value="noiseReveal">Noise Disolve</option>
 																	<option value="pixelReveal">Pixelation</option>
 																	<option value="pixelation">Pixel Disolve</option>
+																	<option value="wipe">Side Wipe</option>
 																</select>
 															</div>
 													</div>
@@ -75,7 +76,54 @@ selectFX.onchange = e => {frame1.setEffect(FX[e.target.value])}
 										</div>
 									</div>
 								</article>
+
+								<article class="tile is-child">
+									<div class="content">
+										<p class="title">Transitions</p>
+										<p class="subtitle">Go from one image to the next</p>
+										<div class="tile is-parent">
+											<div class="tile is-child is-6">
+												<figure class="image backdrop is-480x480">
+													<canvas id="example2"></canvas>
+												</figure>
+												<div class="field is-centered column is-10 is-offset-1">
+														<div class="buttons is-inline">
+																<a id="enter2" class="button is-dark">Forth</a>
+																<a id="exit2"  class="button is-light">Back</a>
+														</div>
+														<div class="select is-primary">
+																<select id="select2">
+																	<option value="noiseReveal">Noise Disolve</option>
+																	<option value="pixelReveal">Pixelation</option>
+																	<option value="pixelation">Pixel Disolve</option>
+																	<option value="wipe">Side Wipe</option>
+																</select>
+															</div>
+													</div>
+											</div>
+											<div class="tile is-child is-6">
+							<pre>
+<code class="language-javascript" data-lang="javascript">
+import Frame, { FX } from 'shaderFrame'
+
+// Select image by id in document
+const imageFrom = document.getElementById('example1')
+
+// Convert image to a shaderFrame
+const frame = new Frame(image, FX.noiseReveal)
+
+// Handle enter, exit and effect changes
+enterButton.onclick = () => frame1.enter()
+exitButton.onclick = () => frame1.exit()
+selectFX.onchange = e => {frame1.setEffect(FX[e.target.value])}
+</code>
+							</pre>
+											</div>
+										</div>
+									</div>
+								</article>
 							</div>
+
 						</div>
 					</div>
 			</div>
